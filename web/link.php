@@ -92,11 +92,6 @@
 		});
 	</script>
 	<style>
-		#streamlabs, #cryptodonate, #streamquest, #streamtip, #tipeee, #tipeeestream, #donationtracker, #patreon, #gamewisp {
-			
-			vertical-align: sub;
-		}
-		
 		#streamlabstext, #cryptodonatetext, #streamquesttext, #streamtiptext, #tipeeetext, #tipeeestreamtext, #donationtrackertext, #patreontext, #gamewisptext {
 			display: none;
 		}
@@ -149,7 +144,7 @@
 		</ul>
 		
 		<a href="https://github.com/Sioxox/Multi-Stream-Tips"><span id="github" style="position: absolute; bottom: 10px; left: 10px;">GitHub</span></a>
-		<a href="https://sioxox.tv/stream/tips/?user=Sioxox&title=Sioxox%20Tips&streamlabs=1&cryptodonate=1&tipeee=1"><span id="sioxox-tips" style="position: absolute; bottom: 10px; margin: auto; width: 100%; text-align: center;">Faire un don</span></a>
+		<a href="https://sioxox.tv/stream/tips/?user=Sioxox&favicon=https://www.favicon-generator.org/download/2018-03-16/f59c8232f57809a14f742571307f1c43.ico&title=Sioxox%20Tips&streamlabs=1&cryptodonate=1&tipeee=1"><span id="sioxox-tips" style="position: absolute; bottom: 10px; left: 50%;">Faire un don</span></a>
 		<span id="copyright" style="position: absolute; bottom: 10px; right: 10px;">Sioxox © 2018</span>
 	</body>
 </html>
