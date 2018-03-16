@@ -81,6 +81,14 @@ if(empty($_GET['color'])) {
 } else {
 	$color = $_GET['color'];
 }
+
+$i=0;
+
+foreach($_GET as $key => $value) {
+	if($value == 1) {
+		echo "<style>ul li#".$key." { order: ".$i++."; }</style>";
+	}
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -89,6 +97,21 @@ if(empty($_GET['color'])) {
 	<title><?php echo $_GET['title'] ?></title>
 	<link rel="stylesheet" href="./ressources/css/style.css" type="text/css" media="all">
 	<style>
+		ul {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: flex;
+  
+			-moz-flex-flow: wrap;
+			-webkit-flex-flow: wrap;
+			flex-flow: wrap;
+			justify-content: center;
+			margin: auto;
+		}
+		
 		.category .category_frame-left-bottom, .category .category_frame-left-top, .category .category_frame-right-bottom, .category .category_frame-right-top {
 			width: 16px;
 			height: 16px;
