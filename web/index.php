@@ -1,6 +1,12 @@
 <?php
+if(empty($_GET['title'])) {
+	$title = $_GET['user'];
+} else {
+	$title = $_GET['title'];
+}
+
 if($_GET['streamlabs'] != "1") {
-	echo "<style>#streamlabs { display: none; }</style>";
+echo "<style>#streamlabs { display: none; }</style>";
 }
 if($_GET['cryptodonate'] != "1") {
 	echo "<style>#cryptodonate { display: none; }</style>";
@@ -76,9 +82,7 @@ if(empty($_GET['gamewispuser'])) {
 
 
 
-if(empty($_GET['color'])) {
-	$color = "6441A4";
-} else {
+if(!empty($_GET['color'])) {
 	$color = $_GET['color'];
 }
 
@@ -94,74 +98,12 @@ foreach($_GET as $key => $value) {
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title><?php echo $_GET['title'] ?></title>
-	<link rel="stylesheet" href="./ressources/css/style.css" type="text/css" media="all">
+	<link rel="icon" href="<?php echo $_GET['favicon']; ?>">
+	<title><?php echo $title ?></title>
+	<link rel="stylesheet" href="./ressources/css/index.css" type="text/css">
 	<style>
-		ul {
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: flex;
-  
-			-moz-flex-flow: wrap;
-			-webkit-flex-flow: wrap;
-			flex-flow: wrap;
-			justify-content: center;
-			margin: auto;
-		}
-		
 		.category .category_frame-left-bottom, .category .category_frame-left-top, .category .category_frame-right-bottom, .category .category_frame-right-top {
-			width: 16px;
-			height: 16px;
-			border: 2px solid <?php echo "#".$color.";" ?>
-			position: absolute;
-			z-index: 5;
-			opacity: 0;
-			transition: opacity .4s ease,transform .4s ease;
-		}
-		
-		.category .category_frame-left-top {
-			left: 0;
-			top: 0;
-			border-right: 0;
-			border-bottom: 0;
-			-ms-transform: translate(-15px,-15px);
-			transform: translate(-15px,-15px);
-		}
-
-		.category .category_frame-left-bottom {
-			left: 0;
-			bottom: 0;
-			border-right: 0;
-			border-top: 0;
-			-ms-transform: translate(-15px,15px);
-			transform: translate(-15px,15px);
-		}
-
-		.category .category_frame-right-top {
-			right: 0;
-			top: 0;
-			border-left: 0;
-			border-bottom: 0;
-			-ms-transform: translate(15px,-15px);
-			transform: translate(15px,-15px);
-		}
-
-		.category .category_frame-right-bottom {
-			right: 0;
-			bottom: 0;
-			border-left: 0;
-			border-top: 0;
-			-ms-transform: translate(15px,15px);
-			transform: translate(15px,15px);
-		}
-
-		.category a:hover .category_frame-left-bottom, .category a:hover .category_frame-left-top, .category a:hover .category_frame-right-bottom, .category a:hover .category_frame-right-top {
-			opacity: 1;
-			-ms-transform: translate(0,0);
-			transform: translate(0,0);
+			border-color: <?php echo "#".$color.";" ?>
 		}
 		
 		.category a:hover .category_title {
