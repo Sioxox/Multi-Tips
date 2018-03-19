@@ -83,8 +83,13 @@
 			return checked.join("") + text.join("");
 		}
 		
+		var prevSrc = $('#link').prop("defaultValue");
 		setInterval(function loop() {
 			$('#link').val($('#link').prop("defaultValue") + user() + favicon() + title() + color() + checkbox());
+			if(prevSrc != ($('#link').prop("defaultValue") + user() + favicon() + title() + color() + checkbox())) {
+				$("#prev").attr("src", $('#link').prop("defaultValue") + user() + favicon() + title() + color() + checkbox());
+				prevSrc = $('#link').prop("defaultValue") + user() + favicon() + title() + color() + checkbox();
+			}
 		}, 100);
 		
 		$(function() {
@@ -94,6 +99,14 @@
 	<style>
 		#streamlabstext, #cryptodonatetext, #streamquesttext, #streamtiptext, #tipeeetext, #tipeeestreamtext, #donationtrackertext, #patreontext, #gamewisptext {
 			display: none;
+		}
+		
+		#prev {
+			border: 0;
+			-webkit-transform:scale(0.5);
+			-moz-transform:scale(0.5);
+			-o-transform:scale(0.5);
+			-ms-transform:scale(0.5);
 		}
 	</style>
 </head>
@@ -135,13 +148,15 @@
 			</li>
 			<li class="ui-state-default">
 				<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><input id="patreon" type="checkbox" value="&patreon=1">Patreon<br>
-				<input id="patreontext" type="text" placeholder="Patreon User">
+				<input id="patreontext" type="text" p<laceholder="Patreon User">
 			</li>
 			<li class="ui-state-default">
 				<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><input id="gamewisp" type="checkbox" value="&gamewisp=1">GameWisp<br>
 				<input id="gamewisptext" type="text" placeholder="GameWisp User">
 			</li>
 		</ul>
+		
+		<iframe id="prev" width="1024" height="768" style="position: absolute; top: 10px; right: -125px;"></iframe>
 		
 		<a href="https://github.com/Sioxox/Multi-Stream-Tips"><span id="github" style="position: absolute; bottom: 10px; left: 10px;">GitHub</span></a>
 		<a href="https://sioxox.tv/stream/tips/?user=Sioxox&favicon=https://www.favicon-generator.org/download/2018-03-16/f59c8232f57809a14f742571307f1c43.ico&title=Sioxox%20Tips&streamlabs=1&cryptodonate=1&tipeee=1"><span id="sioxox-tips" style="position: absolute; bottom: 10px; left: 50%;">Faire un don</span></a>
