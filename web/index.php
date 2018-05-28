@@ -6,7 +6,7 @@ if(empty($_GET['title'])) {
 }
 
 if($_GET['streamlabs'] != "1") {
-echo "<style>#streamlabs { display: none; }</style>";
+	echo "<style>#streamlabs { display: none; }</style>";
 }
 if($_GET['cryptodonate'] != "1") {
 	echo "<style>#cryptodonate { display: none; }</style>";
@@ -31,6 +31,18 @@ if($_GET['patreon'] != "1") {
 }
 if($_GET['gamewisp'] != "1") {
 	echo "<style>#gamewisp { display: none; }</style>";
+}
+if($_GET['muxy'] != "1") {
+	echo "<style>#muxy { display: none; }</style>";
+}
+if($_GET['streamelements'] != "1") {
+	echo "<style>#streamelements { display: none; }</style>";
+}
+if($_GET['gamingforgood'] != "1") {
+	echo "<style>#gamingforgood { display: none; }</style>";
+}
+if($_GET['gather'] != "1") {
+	echo "<style>#gather { display: none; }</style>";
 }
 
 
@@ -78,6 +90,26 @@ if(empty($_GET['gamewispuser'])) {
 	$gamewispuser = strtolower($_GET['user']);
 } else {
 	$gamewispuser = strtolower($_GET['gamewispuser']);
+}
+if(empty($_GET['muxyuser'])) {
+	$muxyuser = strtolower($_GET['user']);
+} else {
+	$muxyuser = strtolower($_GET['muxyuser']);
+}
+if(empty($_GET['streamelementsuser'])) {
+	$streamelementsuser = strtolower($_GET['user']);
+} else {
+	$streamelementsuser = strtolower($_GET['streamelementsuser']);
+}
+if(empty($_GET['gamingforgooduser'])) {
+	$gamingforgooduser = strtolower($_GET['user']);
+} else {
+	$gamingforgooduser = strtolower($_GET['gamingforgooduser']);
+}
+if(empty($_GET['gatheruser'])) {
+	$gatheruser = strtolower($_GET['user']);
+} else {
+	$gatheruser = strtolower($_GET['gatheruser']);
 }
 
 
@@ -274,6 +306,78 @@ foreach($_GET as $key => $value) {
 							</div>
 							<div class="category_title">
 								<h4>GameWisp</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li id="muxy">
+					<div class="category">
+						<a href="https://u.muxy.io/tip/<?php echo $muxyuser ?>">
+							<div class="category_frame">
+								<div class="category_frame-left-top"></div>
+								<div class="category_frame-right-top"></div>
+								<div class="category_frame-right-bottom"></div>
+								<div class="category_frame-left-bottom"></div>
+							</div>
+							<div class="category_image">
+								<img width="216" height="241" src="./ressources/images/muxy.png" alt="Muxy">
+							</div>
+							<div class="category_title">
+								<h4>Muxy</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li id="StreamElements">
+					<div class="category">
+						<a href="https://streamelements.com/<?php echo $streamelementsuser ?>/tip">
+							<div class="category_frame">
+								<div class="category_frame-left-top"></div>
+								<div class="category_frame-right-top"></div>
+								<div class="category_frame-right-bottom"></div>
+								<div class="category_frame-left-bottom"></div>
+							</div>
+							<div class="category_image">
+								<img width="216" height="241" src="./ressources/images/streamelements.png" alt="StreamElements">
+							</div>
+							<div class="category_title">
+								<h4>StreamElements</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li id="GamingForGood">
+					<div class="category">
+						<a href="https://www.gamingforgood.net/s/<?php echo $gamingforgooduser ?>/widget">
+							<div class="category_frame">
+								<div class="category_frame-left-top"></div>
+								<div class="category_frame-right-top"></div>
+								<div class="category_frame-right-bottom"></div>
+								<div class="category_frame-left-bottom"></div>
+							</div>
+							<div class="category_image">
+								<img width="216" height="241" src="./ressources/images/gamingforgood.png" alt="GamingForGood">
+							</div>
+							<div class="category_title">
+								<h4>GamingForGood</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li id="Gather">
+					<div class="category">
+						<a href="https://gather.operaevent.co/tips/<?php echo $gatheruser ?>">
+							<div class="category_frame">
+								<div class="category_frame-left-top"></div>
+								<div class="category_frame-right-top"></div>
+								<div class="category_frame-right-bottom"></div>
+								<div class="category_frame-left-bottom"></div>
+							</div>
+							<div class="category_image">
+								<img width="216" height="241" src="./ressources/images/gather.png" alt="Gather">
+							</div>
+							<div class="category_title">
+								<h4>Gather</h4>
 							</div>
 						</a>
 					</div>
