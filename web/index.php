@@ -132,7 +132,7 @@ if(empty($_GET['oneupcoinuser'])) {
 	$oneupcoinuser = strtolower($_GET['oneupcoinuser']);
 }
 if(empty($_GET['steamtradeuser'])) {
-	$steamtradeuser = strtolower($_GET['user']);
+	$steamtradeuser = "https://steamcommunity.com/tradeoffer/new/?partner=&token=";
 } else {
 	$steamtradeuser = strtolower($_GET['steamtradeuser']);
 }
