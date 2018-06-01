@@ -130,7 +130,7 @@
 			margin-bottom: 20px;
 		}
 		
-		#streamlabstext, #cryptodonatetext, #streamquesttext, #streamtiptext, #tipeeetext, #tipeeestreamtext, #donationtrackertext, #patreontext, #gamewisptext, #muxytext, #streamelementstext, #gamingforgoodtext, #gathertext {
+		#streamlabstext, #cryptodonatetext, #streamquesttext, #streamtiptext, #tipeeetext, #tipeeestreamtext, #donationtrackertext, #patreontext, #gamewisptext, #muxytext, #streamelementstext, #gamingforgoodtext, #gathertext, #utiptext, #oneupcointext, #steamtradetext {
 			display: none;
 		}
 		
@@ -222,6 +222,18 @@
 						<li class="ui-state-default">
 							<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label id="tips-title"><input id="gather" type="checkbox" value="&gather=1">Gather</label><br>
 							<input id="gathertext" type="text" placeholder="Gather User">
+						</li>
+						<li class="ui-state-default">
+							<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label id="tips-title"><input id="utip" type="checkbox" value="&utip=1">uTip</label><br>
+							<input id="utiptext" type="text" placeholder="uTip User">
+						</li>
+						<li class="ui-state-default">
+							<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label id="tips-title"><input id="oneupcoin" type="checkbox" value="&oneupcoin=1">1UpCoin</label><br>
+							<input id="oneupcointext" type="text" placeholder="1UpCoin User">
+						</li>
+						<li class="ui-state-default">
+							<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label id="tips-title"><input id="steamtrade" type="checkbox" value="&steamtrade=1">Steam Trade (En dev)</label><br>
+							<input id="steamtradetext" type="text" placeholder="SteamTrade Link">
 						</li>
 					</ul>
 				</td>

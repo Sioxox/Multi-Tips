@@ -44,6 +44,16 @@ if($_GET['gamingforgood'] != "1") {
 if($_GET['gather'] != "1") {
 	echo "<style>#gather { display: none; }</style>";
 }
+if($_GET['utip'] != "1") {
+	echo "<style>#utip { display: none; }</style>";
+}
+if($_GET['oneupcoin'] != "1") {
+	echo "<style>#oneupcoin { display: none; }</style>";
+}
+if($_GET['steamtrade'] != "1") {
+	echo "<style>#steamtrade { display: none; }</style>";
+}
+
 
 
 if(empty($_GET['streamlabsuser'])) {
@@ -110,6 +120,21 @@ if(empty($_GET['gatheruser'])) {
 	$gatheruser = strtolower($_GET['user']);
 } else {
 	$gatheruser = strtolower($_GET['gatheruser']);
+}
+if(empty($_GET['utipuser'])) {
+	$utipuser = strtolower($_GET['user']);
+} else {
+	$utipuser = strtolower($_GET['utipuser']);
+}
+if(empty($_GET['oneupcoinuser'])) {
+	$oneupcoinuser = strtolower($_GET['user']);
+} else {
+	$oneupcoinuser = strtolower($_GET['oneupcoinuser']);
+}
+if(empty($_GET['steamtradeuser'])) {
+	$steamtradeuser = strtolower($_GET['user']);
+} else {
+	$steamtradeuser = strtolower($_GET['steamtradeuser']);
 }
 
 
@@ -378,6 +403,60 @@ foreach($_GET as $key => $value) {
 							</div>
 							<div class="category_title">
 								<h4>Gather</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li id="uTip">
+					<div class="category">
+						<a href="https://utip.io/<?php echo $utipuser ?>">
+							<div class="category_frame">
+								<div class="category_frame-left-top"></div>
+								<div class="category_frame-right-top"></div>
+								<div class="category_frame-right-bottom"></div>
+								<div class="category_frame-left-bottom"></div>
+							</div>
+							<div class="category_image">
+								<img width="216" height="241" src="./ressources/images/utip.png" alt="utip">
+							</div>
+							<div class="category_title">
+								<h4>uTip</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li id="oneupcoin">
+					<div class="category">
+						<a href="https://1upcoin.com/donate/<?php echo $oneupcoinuser ?>">
+							<div class="category_frame">
+								<div class="category_frame-left-top"></div>
+								<div class="category_frame-right-top"></div>
+								<div class="category_frame-right-bottom"></div>
+								<div class="category_frame-left-bottom"></div>
+							</div>
+							<div class="category_image">
+								<img width="216" height="241" src="./ressources/images/1upcoin.png" alt="oneupcoin">
+							</div>
+							<div class="category_title">
+								<h4>1UpCoin</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li id="steamtrade">
+					<div class="category">
+						<a href="<?php echo $steamtradeuser ?>">
+							<div class="category_frame">
+								<div class="category_frame-left-top"></div>
+								<div class="category_frame-right-top"></div>
+								<div class="category_frame-right-bottom"></div>
+								<div class="category_frame-left-bottom"></div>
+							</div>
+							<div class="category_image">
+								<img width="216" height="241" src="./ressources/images/steamtrade.png" alt="steamtrade">
+							</div>
+							<div class="category_title">
+								<h4>Steam Trade</h4>
 							</div>
 						</a>
 					</div>
