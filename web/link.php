@@ -80,7 +80,7 @@
 				document.querySelector("#" + $(this).attr('id')).closest("li").style.height = "25px";
 			});
 			
-			return checked.join("") + text.join("");
+			return checked.join("") + text.join("").replace("&token", "qptoken");
 		}
 		
 		var prevSrc = $('#link').prop("defaultValue");
@@ -232,8 +232,8 @@
 							<input id="oneupcointext" type="text" placeholder="1UpCoin User">
 						</li>
 						<li class="ui-state-default">
-							<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label id="tips-title"><input id="steamtrade" type="checkbox" value="&steamtrade=1">Steam Trade (En dev)</label><br>
-							<input id="steamtradetext" type="text" placeholder="SteamTrade Link">
+							<span class="ui-icon ui-icon-arrowthick-2-n-s"></span><label id="tips-title"><input id="steamtrade" type="checkbox" value="&steamtrade=1">Steam Trade</label><br>
+							<input id="steamtradetext" type="text" placeholder="Steam Trade Link">
 						</li>
 					</ul>
 				</td>

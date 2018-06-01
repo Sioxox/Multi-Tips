@@ -445,7 +445,7 @@ foreach($_GET as $key => $value) {
 				</li>
 				<li id="steamtrade">
 					<div class="category">
-						<a href="<?php echo $steamtradeuser ?>">
+						<a href="<?php echo str_replace("qptoken", "&token", $steamtradeuser) ?>">
 							<div class="category_frame">
 								<div class="category_frame-left-top"></div>
 								<div class="category_frame-right-top"></div>
