@@ -246,5 +246,16 @@
 		<a href="https://github.com/Sioxox/Multi-Stream-Tips"><span id="github" style="position: absolute; bottom: 10px; left: 10px;">GitHub</span></a>
 		<a href="https://sioxox.tv/stream/tips/?user=Sioxox&favicon=https://www.favicon-generator.org/download/2018-03-16/f59c8232f57809a14f742571307f1c43.ico&title=Sioxox%20Tips&streamlabs=1&cryptodonate=1&tipeee=1"><span id="sioxox-tips" style="position: absolute; bottom: 10px; left: 50%;">Faire un don</span></a>
 		<span id="copyright" style="position: absolute; bottom: 10px; right: 10px;">Sioxox © 2018</span>
+		
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96141210-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-96141210-2');
+		</script>
 	</body>
 </html>
