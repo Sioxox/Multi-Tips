@@ -1,5 +1,5 @@
 # Multi Tips
-Page builder for designers who want to display multiple means of financial aid in a single link.
+**Page builder for designers who want to display multiple means of financial aid in a single link.**
 
 # Available platforms
 * StreamLabs
@@ -31,4 +31,4 @@ Page builder for designers who want to display multiple means of financial aid i
 ![Settings page](/images/settings_page.png)
 ![Multiple screens](/images/multiple_screens.png)
 
-**Attention, this site uses Google Analytics to know the number of visitors.**
+***Attention, this site uses Google Analytics to know the number of visitors.***
